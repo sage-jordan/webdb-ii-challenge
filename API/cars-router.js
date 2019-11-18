@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
         })
 });
 
-router.post('/', (req, res) => { // WORKS
+router.post('/', (req, res) => { 
     const carData = req.body;
     db('cars').insert(carData)
         .then(car => {
@@ -38,7 +38,7 @@ router.post('/', (req, res) => { // WORKS
         })
 });
 
-router.put('/:id', (req, res) => { // WORKS 
+router.put('/:id', (req, res) => { 
     const { id } = req.params;
     const changes = req.body;
     db('cars')
