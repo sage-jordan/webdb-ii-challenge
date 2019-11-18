@@ -1,10 +1,9 @@
-const server = require('./server.js');
-const carsRouter = require('./cars-router');
+const express = require('express');
 
-const PORT = process.env.PORT || 4000;
+const db = require('./data/dbConfig.js');
 
-server.use('/api/cars', carsRouter);
+const server = express();
 
-server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-});
+server.use(express.json());
+
+module.exports = server;
