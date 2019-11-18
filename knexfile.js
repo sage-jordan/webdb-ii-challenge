@@ -7,14 +7,12 @@ module.exports = {
     connection: {
       filename: './data/car-dealer.db3'
     },
-    userNullAsDefault: true
+    userNullAsDefault: true,
+    migrations: {
+      directory: './data/migrations'
+    },
+    seeds: {
+      directory: './data/seeds'
+    }
   },
-
-  migrations: {
-    directory: './migrations'
-  },
-
-  seeds: {
-    directory: './seeds'
-  }
 };
