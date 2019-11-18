@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-  return knex.schema.createTable('cars'), tbl => {
+  return knex.schema.createTable('cars', tbl => {
     tbl.increments();
     //REQ:
     //VIN
@@ -16,7 +16,7 @@ exports.up = function(knex) {
     tbl.string('TransmissionType');
     //TITLE STATUS
     tbl.string('TitleStatus');
-  }
+  });
 };
 
 exports.down = function(knex) {
