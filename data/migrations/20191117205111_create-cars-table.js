@@ -13,9 +13,9 @@ exports.up = function(knex) {
       tbl.integer('MILEAGE').notNullable();
       //NOT REQ:
       //TRANSMISSION TYPE
-      tbl.string('Transmission Type');
+      tbl.string('TransmissionType');
       //TITLE STATUS
-      tbl.string('Title Status');
+      tbl.string('TitleStatus');
   }
 };
 
